@@ -7,6 +7,42 @@
     <title>Document</title>
 </head>
 <body>
-    
+    <!-- <li class="list" id="lista-dinamica">
+        <b>Nombre: </b> <span></span>
+    </li> -->
+
+    <ul id="lista-dinamica"></ul>
+
+    <script>
+        const lista =document.getElementById("lista-dinamica");
+        const arrayItem =["item 1","item2","item 3","item 4"];
+        const fragment = document.createDocumentFragment();
+        arrayItem.forEach((item)=>{
+
+            const li =document.createElement("li");
+            li.classList.add("list");
+
+            const b = document.createElement("b")
+
+            b.textContent ="Nombre: ";
+
+            const span =document.createElement("span")
+
+
+            span.classList.add("text-danger")
+
+            span.textContent=item;
+
+            li.appendChild(b);
+
+            li.appendChild(span);
+
+            fragment.appendChild(li);
+
+
+        });
+
+        lista.appendChild(fragment);
+    </script>
 </body>
 </html>
