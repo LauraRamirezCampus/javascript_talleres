@@ -19,10 +19,10 @@
         </div>
         <div class="row">
             <div class="col">
-          <form action="" name="formu">
+          <form action="" name="formu"> 
             <label for="exampleFormControlInput1" class="form-label">Interes</label>
             <input class="form-control form-control-lg" name="inte" type="text" placeholder="porcentaje de interes" aria-label=".form-control-lg example">
-          </form>
+          
         </div>
         <div class="col">
             <label for="exampleFormControlInput1" class="form-label">valor de prestamo</label>
@@ -32,7 +32,10 @@
         <div class="col">
             <label for="exampleFormControlInput1" class="form-label">cuotas</label>
             <input class="form-control form-control-lg" name="cuotas" type="text" placeholder="cantidad de cuotas" aria-label=".form-control-lg example">
-            
+            <input type="button" value="Calcular interés" 
+            onclick="imprimir();"
+            class="btn btn-primary">
+          </form>
         </div>
         </div>
     </div>
@@ -44,6 +47,9 @@
                         <th>MES</th>
                         <th>VALOR</th>
                         <th>VALOR TOTAL</th>
+                        <th>CAPITAL</th>
+                        <th>INTERES</th>
+                        <th>TOTAL</th>
                     </tr>
                 </thead>
 
@@ -54,9 +60,7 @@
 
         </div>
         <div class="col-3">
-            <input type="button" value="Calcular interés" 
-            onclick="montoDeposito();"
-            class="btn btn-primary">
+            
 
         </div>
     </div>
@@ -66,7 +70,7 @@
   
   
   
-  <script src="prestamo.js"></script>
+  <script src="miprestamo.js"></script>
 
   <!--
   This script places a badge on your repl's full-browser view back to your repl's cover

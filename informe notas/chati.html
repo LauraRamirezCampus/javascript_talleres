@@ -1,0 +1,55 @@
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>Resultados de la prueba de Unlimited Soft</title>
+  </head>
+  <body>
+    <h1>Resultados de la prueba de Unlimited Soft</h1>
+    <h2>Listado de interesados ordenados por puntaje</h2>
+    <ul id="lista-puntajes">
+    </ul>
+    <h2>Listado de interesados con puntaje mayor a 35/50</h2>
+    <ul id="lista-puntajes-altos">
+    </ul>
+    
+    <script>
+      // Creamos dos arrays vacíos para almacenar los datos de los interesados
+      let interesados = [];
+      let interesadosAltos = [];
+
+      // Pedimos al usuario que ingrese los datos de cada interesado usando un ciclo while
+      let NUIP = "";
+      while (NUIP.toUpperCase() !== "FIN") {
+        NUIP = prompt("Ingresa el NUIP del interesado (o escribe 'FIN' para terminar)");
+        if (NUIP.toUpperCase() !== "FIN") {
+          let nombre = prompt("Ingresa el nombre del interesado");
+          let puntaje = parseFloat(prompt("Ingresa el puntaje obtenido por el interesado (0 a 50)"));
+          // Creamos un objeto para almacenar los datos de cada interesado y lo agregamos al array de interesados
+          let interesado = { NUIP: NUIP, nombre: nombre, puntaje: puntaje };
+          interesados.push(interesado);
+          // Si el puntaje del interesado es mayor a 35/50, lo agregamos al array de interesados con puntaje alto
+          if (puntaje > 35) {
+            interesadosAltos.push(interesado);
+          }
+        }
+      }
+
+      // Ordenamos el array de interesados por puntaje de forma descendente
+      interesados.sort((a, b) => b.puntaje - a.puntaje);
+
+      // Mostramos los listados de interesados en la página
+      let listaPuntajes = document.getElementById("lista-puntajes");
+      let listaPuntajesAltos = document.getElementById("lista-puntajes-altos");
+      interesados.forEach(interesado => {
+        let item = document.createElement("li");
+        item.textContent = interesado.NUIP + " - " + interesado.nombre + " - " + interesado.puntaje;
+        listaPuntajes.appendChild(item);
+      });
+      interesadosAltos.forEach(interesado => {
+        let item = document.createElement("li");
+        item.textContent = interesado.NUIP + " - " + interesado.nombre + " - " + interesado.puntaje;
+        listaPuntajesAltos.appendChild(item);
+      });
+    </script>
+  </body>
+</html>

@@ -1,4 +1,4 @@
-const buildFila = (nombre,lunes,martes,miercoles,jueves,viernes,sabado,total) => {
+    const buildFila = (nombre,lunes,martes,miercoles,jueves,viernes,sabado,total) => {
     return `<tr>
                 <td>${nombre}</td>
                 <td>${lunes}</td>
@@ -43,7 +43,7 @@ const buildFila = (nombre,lunes,martes,miercoles,jueves,viernes,sabado,total) =>
 res= buil (chofm);
 document.getElementById("mayor").innerHTML = res;
 
-str += buildFila(nombre,martes,lunes,miercoles,jueves,viernes,sabado,total);
+str += buildFila(nombre,lunes,martes,miercoles,jueves,viernes,sabado,total);
     document.getElementById("respuesta").innerHTML = str;
 }
 const buil = (chofm) => {
