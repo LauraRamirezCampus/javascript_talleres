@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        function final(){
+        let a=[3,2,1];
+        let b=[1,5,3];
+        let final=[];
+
+        let cont=0;
+        let alice=0;
+        let bob=0;
+        for(let i=0; i < a.length; i++) {
+            cont++
+            let posicionA=a[cont-1];
+            let posicionB=b[cont-1];
+
+            if (posicionA>posicionB){
+                alice++
+            }
+            else if (posicionA<posicionB){
+                bob++
+            }
+            
+
+        }
+        final.push(alice,bob);
+        console.log(final);}
+        final()
+        
+
+
+    </script>
+</body>
+</html>

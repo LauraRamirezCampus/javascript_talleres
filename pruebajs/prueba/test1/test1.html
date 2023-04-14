@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/prueba/bootstrap-5.0.2-dist/css/bootstrap.min.css">
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+    <form action="" name="formu" >
+        <p></p>
+        <div class="row">
+            <div class="col">
+                <label for="nombre">Cedula:</label>
+                <input type="text" name="cc" id="disabledTextInput" class="form-control" placeholder="Ingrese el nombre">
+            </div>
+            <div class="col">
+                <label for="nombre">Nombre:</label>
+                <input type="text" name="nombre" id="disabledTextInput" class="form-control" placeholder="Ingrese el nombre">
+            </div>
+            <div class="col">
+                <label for="nombre">Categoria:</label>
+                <input type="text" name="categoria" id="disabledTextInput" class="form-control" placeholder="Ingrese el nombre">
+            </div>
+            <div class="col">
+                <br>
+                <button type="button" onclick="imprimir()" class="btn btn-info">Agregar</button>
+            </div>
+            </div>
+            
+        </div>
+        
+        
+    </form>
+    <br>
+    <div class="container">
+    <table class="table table-success table-striped-columns">
+        <thead>
+            <tr>
+                <td>Cedula</td>
+                <td>Nombre</td>
+                <td>Categoria</td>
+                <td>salario bruto</td>
+                <td>Auxilio TX</td>
+                <td>Bonificaciones</td>
+                <td>EPS</td>
+                <td>Pension</td>
+                <td>Salario Neto</td>
+            </tr>
+
+    </thead>
+    <tbody id="respuesta">
+        
+    </tbody>
+      </table>
+
+      <table class="table table-success table-striped-columns">
+        <thead>
+            <tr>
+                <td>Cant Empleados</td>
+                <td>Empleados Menos Gana</td>
+                <td>Promedio salarios</td>
+                <td>Empleado mas Gana</td>
+                <td>Valor Total nomina</td>
+                
+            </tr>
+
+    </thead>
+    <tbody id="respuesta2">
+        
+    </tbody>
+      </table>
+    </div>
+</div>
+
+<script src="test1.js"></script>
+<script src="/bootstrap-5.0.2-dist/js/bootstrap.bundle.min.js"></script>
+</body>
+</html>
