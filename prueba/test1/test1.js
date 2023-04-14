@@ -13,13 +13,14 @@ const buildfila  = (cc,nom,categoria,sbruto,aux,bonifi,eps,pension,sneto) =>{
     `
 };
 
-const mejor=(cant,menosg,prom,masg,total) =>{
+const mejor=(cant,menosg,prom,masg,total,mayor,menor) =>{
     return `
     <tr>
     <td>${cant}</td>
-    <td>${menosg}</td>
+    <td>${menosg}(${menor})</td>
     <td>${prom}</td>
-    <td>${masg}</td>
+    <td>${masg} (${mayor})</td>
+    
     <td>${total}</td>
     <tr>
     `
@@ -165,6 +166,6 @@ function imprimir(){
     str += buildfila (cc,nom,categoria,sbruto,aux,bonifi,eps,pension,sneto);
     document.getElementById("respuesta").innerHTML = str;
 
-    gana = mejor(cant,menosg,prom,masg,total);
+    gana = mejor(cant,menosg,prom,masg,total,mayor,menor);
     document.getElementById("respuesta2").innerHTML = gana;
 }
