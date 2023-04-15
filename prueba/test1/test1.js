@@ -42,11 +42,8 @@ function imprimir(){
     let bonifi=0;
     let eps=0;
     let prom=0;
-    
 
     nombres.push(nom);
-    
-
     if (categoria=="auxiliar a"){
         aux=400000;
         bonifi=100000;
@@ -62,7 +59,6 @@ function imprimir(){
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
 
-
     }
     else if(categoria=="tecnico a"){
         aux=0;
@@ -70,7 +66,7 @@ function imprimir(){
         sbruto=(1160000*1.5);
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
-        
+
     }
     else if(categoria=="tecnico b"){
         aux=0;
@@ -78,9 +74,6 @@ function imprimir(){
         sbruto=(1160000*2);
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
-
-
-        
 
     }
     else if(categoria=="profesional a"){
@@ -90,9 +83,6 @@ function imprimir(){
         eps=(sbruto*0,04);
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
-
-
-
     }
     else if(categoria=="profesional b"){
         aux=0;
@@ -110,9 +100,6 @@ function imprimir(){
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
 
-
-        
-
     }
     else if(categoria=="director b"){
         aux=0;
@@ -120,8 +107,6 @@ function imprimir(){
         sbruto=(1160000*4.5);
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
-
-
     }
     else if(categoria=="gerente departamento"){
         aux=0;
@@ -129,8 +114,6 @@ function imprimir(){
         sbruto=(1160000*6);
         eps=(sbruto*0.04);
         pension=(sbruto*0.04);
-
-
     }
     else if(categoria=="gerente general"){
         aux=0;
@@ -139,8 +122,6 @@ function imprimir(){
         eps=(sbruto*0.04);    let numeroMayor = Math.max(...totales);
 
         pension=(sbruto*0.04);
-
-
     }
     let sneto=sbruto+bonifi-aux-eps-pension
     total=total+sneto;
