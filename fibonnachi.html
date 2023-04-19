@@ -14,20 +14,27 @@
         let n=Number(prompt("numero: "));
         
         let a=[];
+
         a.push(t1,t2);
-        console.log(a);
+        //console.log(a);
             let cantidad=0;
             let u=0;
             
          for(let i=0; i< n; i++){
             let cantidad=Number(a.length);
-            console.log("la",cantidad);
+           // console.log("la",cantidad);
             u=a[cantidad-1];
             // console.log("num",u);
             uv=a[cantidad-2];
             total=u+uv;
+
+            a.push(total)
             
+            
+            
+        
          }
+         console.log(a)
         
         }
          fibonachi()
